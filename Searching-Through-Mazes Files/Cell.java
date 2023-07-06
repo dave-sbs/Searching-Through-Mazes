@@ -111,7 +111,7 @@ public class Cell {
     /**
      * Draws this Cell to the given Graphics object.
      * 
-     * If this Cell is FREE, then it will be drawn with yellow if it has been
+     * If this Cell is FREE, then it will be drawn with pink if it has been
      * visited, otherwise gray.
      * 
      * If this Cell is an OBSTACLE, it will be drawn black.
@@ -124,7 +124,7 @@ public class Cell {
         g.drawRect(getCol() * scale, getRow() * scale, scale, scale);
         switch (getType()) {
             case FREE:
-                draw(g, scale, getPrev() != null ? Color.YELLOW : Color.GRAY);
+                draw(g, scale, getPrev() != null ? Color.PINK : Color.GRAY);
                 break;
             case OBSTACLE:
                 draw(g, scale, Color.BLACK);

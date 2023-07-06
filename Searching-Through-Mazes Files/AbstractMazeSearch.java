@@ -159,7 +159,7 @@ public abstract class AbstractMazeSearch {
         if (getTarget().getPrev() != null) {
             Cell traceBackCur = getTarget().getPrev();
             while (!traceBackCur.equals(getStart())) {
-                traceBackCur.draw(g, scale, Color.GREEN);
+                traceBackCur.draw(g, scale, Color.YELLOW);
                 traceBackCur = traceBackCur.getPrev();
             }
             getTarget().drawPrevPath(g, scale, Color.BLUE);
